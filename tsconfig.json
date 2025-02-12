@@ -20,8 +20,20 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    // option
+    "moduleDetection": "force",
+    "noUncheckedIndexedAccess": true,
+    "checkJs": true,
+    "outDir": "dist",
+    "baseUrl": "."
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next.config.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }
