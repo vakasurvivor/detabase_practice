@@ -24,6 +24,7 @@
   "editor.quickSuggestions": {
     "comments": false
   },
+
   "editor.wordWrap": "off",
   "editor.renderControlCharacters": true,
   "eslint.runtime": "node",
@@ -59,5 +60,6 @@
   // 言語へのファイルの関連付けの glob パターン を構成します
   "files.associations": {
     "*.css": "tailwindcss"
-  }
+  },
+  "cSpell.words": ["ianvs", "lintstagedrc"]
 }
