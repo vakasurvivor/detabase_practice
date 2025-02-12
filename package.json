@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "clean": "git clean -xdf node_modules dist",
     "format": "prettier --check \"**/*.{ts,tsx,js,jsx,cjs,mjs,md,mdx,json,lintstagedrc,yml,yaml}\"",
-    "format:fix": "prettier --write \"**/*.{ts,tsx,js,jsx,cjs,mjs,md,mdx,json,lintstagedrc,yml,yaml}\""
+    "format:fix": "prettier --write \"**/*.{ts,tsx,js,jsx,cjs,mjs,md,mdx,json,lintstagedrc,yml,yaml}\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "15.1.7",
@@ -33,6 +34,8 @@
     "eslint-config-next": "15.1.7",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-unicorn": "^56.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "postcss": "^8.5.2",
     "prettier": "^3.5.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
