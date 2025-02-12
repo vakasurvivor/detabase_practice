@@ -1,11 +1,63 @@
 {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
+    // "source.organizeImports": "explicit",
+    // "source.addMissingImports": "explicit"
   },
+
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
-  // ...
-  "tailwind-fold.autoFold": true
+
+  "[mdx]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  },
+
+  "editor.formatOnSave": true,
+  "editor.rulers": [200],
+  "editor.tabSize": 2,
+  "editor.quickSuggestions": {
+    "comments": false
+  },
+  "editor.wordWrap": "off",
+  "editor.renderControlCharacters": true,
+  "eslint.runtime": "node",
+  "prettier.ignorePath": ".gitignore",
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+
+  // ユーザーが Workspace にインストールした TypeScript を使用するかどうかをユーザーへ確認します。
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  // プロジェクトの node_modules ディレクトリにインストールされたTypeScriptを使用します。
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  /* ---files nesting --- */
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.typegen.ts",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts, ${capture}.typegen.ts",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, .eslintrc.json, postcss.config.mjs, tailwind.config.ts, tsconfig.json, .gitignore, .eslintrc.cjs,  eslint.config.mjs, .lintstagedrc, .prettierrc.mjs",
+    "*.mts": "${capture}.typegen.ts",
+    "*.cts": "${capture}.typegen.ts"
+  },
+
+  // 検索結果から node_modules を除外します。
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "tailwind-fold.autoFold": true,
+
+  // 言語へのファイルの関連付けの glob パターン を構成します
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }
