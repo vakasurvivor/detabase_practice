@@ -1,4 +1,6 @@
 export default function Home() {
+  // let age = 30;
+  // age = "thirty";
   return (
     <main>
       <div className="flex justify-center items-center h-screen">
