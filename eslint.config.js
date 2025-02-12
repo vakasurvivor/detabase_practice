@@ -14,7 +14,10 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // next/core-web-vitals と next/typescript の従来の設定を反映
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // Shareable Configs を利用して読み込んだルールを有効化
   {
     files: ["**/*.ts", "**/*.tsx"],
     plugins: {
@@ -62,12 +65,14 @@ const eslintConfig = [
       "import/no-default-export": "error",
     },
   },
+
+  // 独自ルールを作成し、それを有効化しています。
   {
     files: [
       "**/page.tsx",
       "**/layout.tsx",
       "next.config.ts",
-      "postcss.config.mjs",
+      "postcss.config.js",
       "tailwind.config.ts",
     ],
     rules: {
@@ -75,8 +80,10 @@ const eslintConfig = [
       "import/prefer-default-export": "error",
     },
   },
+
+  // ESLint の対象外とするパターン
   {
-    ignores: ["src/components/ui/*", "*.md"],
+    ignores: ["src/components/ui/*", "*.md", "*.mdx"],
   },
 ];
 
